@@ -7,11 +7,11 @@ An intelligent Telegram bot powered by ChatGPT, designed to make your conversati
 
 ![Telegram Bot Demo](demo.gif)
 
-## Introduction
+# Introduction
 
 Welcome to the Telegram Bot Connected to ChatGPT repository! This bot leverages the power of ChatGPT to provide natural and context-aware conversations right within your Telegram chats. Engage in meaningful dialogues, seek information, and have fun conversations with your AI-powered companion.
 
-## Features
+# Features
 
 - **Natural Language Understanding:** The bot understands and responds to natural language inputs.
 - **Contextual Conversations:** Maintain context and have multi-turn conversations.
@@ -19,16 +19,16 @@ Welcome to the Telegram Bot Connected to ChatGPT repository! This bot leverages 
 - **Interactive:** Engage users with dynamic and engaging responses.
 - **Secure:** Your data and conversations are treated with the utmost privacy.
 
-## Getting Started
+# Getting Started
 
 Follow these steps to get the Telegram Bot Connected to ChatGPT up and running.
 
-### Prerequisites
+# Prerequisites
 
 - [Telegram Bot Token](https://core.telegram.org/bots#botfather): You'll need a Telegram Bot Token obtained from BotFather on Telegram.
 - [OpenAI API Key](https://platform.openai.com/signup): Sign up for OpenAI and get an API key.
 
-### Installation
+# Installation
 
 1. Clone this repository:
 
