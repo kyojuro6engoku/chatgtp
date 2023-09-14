@@ -1,0 +1,29 @@
+{
+  "name": "telegram-chatgpt-bot",
+  "description": "Telegram bot connected to ChatGPT",
+  "repository": "https://github.com/yourusername/your-repo-name.git",
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Your Telegram Bot API token",
+      "required": true
+    },
+    "OPENAI_API_KEY": {
+      "description": "Your OpenAI API key",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "build": {
+    "script": "pip install -r requirements.txt"
+  },
+  "scripts": {
+    "postdeploy": "python telegram_chatgpt_bot.py"
+  }
+}
