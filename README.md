@@ -79,9 +79,9 @@ This project is licensed under the License Name - replace with your license.
 
 # Acknowledgments
 
-## python-telegram-bot: This library is used to interact with the Telegram Bot API. It allows you to send and receive messages, manage commands, and work with updates from Telegram users.
+python-telegram-bot: This library is used to interact with the Telegram Bot API. It allows you to send and receive messages, manage commands, and work with updates from Telegram users.
 
-## openai: This library is used to interact with the OpenAI API. It facilitates sending user messages to ChatGPT and receiving responses.
+openai: This library is used to interact with the OpenAI API. It facilitates sending user messages to ChatGPT and receiving responses.
 
 # Contact
 
