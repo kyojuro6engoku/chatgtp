@@ -1,12 +1,21 @@
-if [ -z $UPSTREAM_REPO ]
-then
-  echo "Cloning main Repository"
-  git clone https://github.com/kyojuro6engoku/chatgtp.git /chatgtp
-else
-  echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /chatgtp
-fi
-cd /chatgtp
-pip3 install -U -r requirements.txt
-echo "Starting Bot...."
-python3 bot.py
+# Use the official Python image as a parent image
+FROM python:3.9-slim
+
+# Create a working directory
+WORKDIR /chatgtp
+
+# Copy the Python script and requirements.txt into the container
+COPY telegram_chatgpt_bot.py .
+COPY requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the start.sh script into the container
+COPY start.sh .
+
+# Make the start.sh script executable
+RUN chmod +x start.sh
+
+# Run the start.sh script when the container starts
+CMD ["./start.sh"]
