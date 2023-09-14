@@ -1,7 +1,7 @@
 {
   "name": "telegram-chatgpt-bot",
   "description": "Telegram bot connected to ChatGPT",
-  "repository": "https://github.com/yourusername/your-repo-name.git",
+  "repository": "https://github.com/kyojuro6engoku/chatgtp.git",
   "env": {
     "TELEGRAM_BOT_TOKEN": {
       "description": "Your Telegram Bot API token",
