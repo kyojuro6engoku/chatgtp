@@ -1,12 +1,19 @@
-FROM python:3.10
+# Use the official Python image as a parent image
+FROM python:3.9-slim
 
-RUN apt update && apt upgrade -y
-RUN apt install git -y
-COPY requirements.txt /requirements.txt
+# Set environment variables
+ENV TELEGRAM_BOT_TOKEN=""
+ENV OPENAI_API_KEY=""
 
-RUN cd /
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /chatgtp
+# Create a working directory
 WORKDIR /chatgtp
-COPY start.sh /start.sh
-CMD ["/bin/bash", "/start.sh"]
+
+# Copy the Python script and requirements.txt into the container
+COPY telegram_chatgpt_bot.py .
+COPY requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Run the Python script
+CMD ["python", "telegram_chatgpt_bot.py"]
