@@ -50,7 +50,7 @@ def handle_message(update, context):
 TELEGRAM_BOT_TOKEN = 'your_bot_token_here'
 
 # Create an Updater instance
-updater = Updater(TELEGRAM_BOT_TOKEN, use_context=True)
+updater = Updater(token='your_bot_token_here')
 
 # Get the dispatcher from the updater
 dispatcher = updater.dispatcher
