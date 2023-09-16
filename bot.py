@@ -1,16 +1,17 @@
 import os
 import telegram
 import openai
+import updater, MessageHandler, Filters from telegram.ext
 
 # Set your Telegram Bot API token and OpenAI API key as environment variables
-TELEGRAM_BOT_TOKEN = os.environ.get("6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo")
+TELEGRAM_BOT_TOKEN = os,environ.get("6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo")
  OPENAI_API_KEY = os.environ.get("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")
 
 # Initialize the Telegram Bot
 bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
 
-# Initialize the OpenAI API
-openai.api_key = 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
+# Initialize the OPENAI KEY
+open.ai_key = OPENAI_API_KEY
 
 # Define a function to handle incoming Telegram messages
 def handle_message(update, context):
@@ -36,9 +37,6 @@ def send_to_chatgpt(user_message):
     )
     
     return response.choices[0].text.strip()
-
-# Create a Telegram updater and dispatcher
-from telegram.ext import Updater, MessageHandler, Filters
 
 updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
 dispatcher = updater.dispatcher
