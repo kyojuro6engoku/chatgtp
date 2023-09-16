@@ -1,7 +1,7 @@
 import os
 import telegram
 import openai
-from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
+from telegram.ext import Updater, MessageHandler, filters, CommandHandler
 
 # Set your Telegram Bot API token and OpenAI API key as environment variables
 TELEGRAM_BOT_TOKEN = os.environ.get("6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo")
@@ -56,7 +56,7 @@ updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
 dispatcher = updater.dispatcher
 
 # Add a message handler
-dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
+dispatcher.add_handler(MessageHandler(filters.text & ~Filters.command, handle_message))
 
 # Start the bot
 updater.start_polling()
