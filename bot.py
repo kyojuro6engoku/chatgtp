@@ -1,5 +1,5 @@
 import os
-import telebot
+import telegram
 from transformers import pipeline
 # Initialize the ChatGPT model
 model = pipeline("text-generation", model="EleutherAI/finetuned-gpt-neo-1.3B")
