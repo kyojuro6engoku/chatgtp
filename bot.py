@@ -4,10 +4,10 @@ import openai
 
 # Set your Telegram Bot API token and OpenAI API key as environment variables
 TELEGRAM_BOT_TOKEN = os.environ.get("6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo")
-OPENAI_API_KEY = os.environ.get("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")
+ OPENAI_API_KEY = os.environ.get("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")
 
 # Initialize the Telegram Bot
-bot = telegram.Bot(token=6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo)
+bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
 
 # Initialize the OpenAI API
 openai.api_key = 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
