@@ -14,7 +14,7 @@ import telegram
 bot = telegram.Bot(token='6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo')
 
 # Initialize the OPENAI KEY
-open.ai_key = OPENAI_API_KEY
+ai_key = OPENAI_API_KEY
 
 # Define a function to handle incoming Telegram messages
 def handle_message(update, context):
