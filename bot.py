@@ -45,6 +45,7 @@ TELEGRAM_BOT_TOKEN = 'your_bot_token_here'
 # Define your message handler function
 def handle_message(update, context):
     # Your message handling logic here
+    pass
 
 TELEGRAM_BOT_TOKEN = 'your_bot_token_here'
 
