@@ -1,7 +1,7 @@
 import os
 import telegram
 import openai
-from telegram.ext import Updater, MessageHandler
+from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
 
 # Set your Telegram Bot API token and OpenAI API key as environment variables
 TELEGRAM_BOT_TOKEN = os.environ.get("6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo")
@@ -42,10 +42,20 @@ def send_to_chatgpt(user_message):
     return response.choices[0].text.strip()
 
 TELEGRAM_BOT_TOKEN = 'your_bot_token_here'
+# Define your message handler function
+def handle_message(update, context):
+    # Your message handling logic here
 
-# Add a message handler to the dispatcher
+TELEGRAM_BOT_TOKEN = 'your_bot_token_here'
+
+# Create an Updater instance
+updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
+
+# Get the dispatcher from the updater
+dispatcher = updater.dispatcher
+
+# Add a message handler
 dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
 
-# Start polling for updates
+# Start the bot
 updater.start_polling()
-updater.idle()
