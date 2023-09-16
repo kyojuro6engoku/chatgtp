@@ -9,7 +9,9 @@ OPENAI_API_KEY = os.environ.get("sk-XKZ39L027DDzMy h6qyoaT3BlbkFJWWJVWiOnLaCkQhL
 
 
 # Initialize the Telegram Bot
-bot = telegram.Bot(token=6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo)
+import telegram
+
+bot = telegram.Bot(token='6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo')
 
 # Initialize the OPENAI KEY
 open.ai_key = OPENAI_API_KEY
