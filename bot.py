@@ -5,7 +5,8 @@ from telegram.ext import updater, MessageHandler, Filters
 
 # Set your Telegram Bot API token and OpenAI API key as environment variables
 TELEGRAM_BOT_TOKEN = os,environ.get("6094342214:AAEYviwCeUXV_I-zExdtsk0AFeKgepfRNyo")
- OPENAI_API_KEY = os.environ.get("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")
+OPENAI_API_KEY = os.environ.get("sk-XKZ39L027DDzMy h6qyoaT3BlbkFJWWJVWiOnLaCkQhLzNc7J")
+
 
 # Initialize the Telegram Bot
 bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
