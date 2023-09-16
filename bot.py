@@ -43,8 +43,6 @@ def send_to_chatgpt(user_message):
 
 TELEGRAM_BOT_TOKEN = 'your_bot_token_here'
 
-updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
-
 # Add a message handler to the dispatcher
 dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
 
