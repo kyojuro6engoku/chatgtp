@@ -1,6 +1,7 @@
 import os
 import telegram
 import openai
+import Updater, CommandHandler, MessageHandler, Filters from telegram.ext
 
 # ... (Other code, including token setup and import of libraries)
 
@@ -28,9 +29,6 @@ def help(update, context):
     context.bot.send_message(chat_id=user_id, text=response)
 
 # ... (Other code, including message handling and ChatGPT interaction)
-
-# Create a Telegram updater and dispatcher
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
 dispatcher = updater.dispatcher
